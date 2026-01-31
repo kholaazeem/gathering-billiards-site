@@ -104,19 +104,25 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* --- GLASS NAVBAR --- */
+/* === NAVBAR (Dark Blue like Footer) === */
 .glass-navbar {
-  background: rgba(10, 25, 60, 0.2); /* Halka sa Dark Blue background */
-  backdrop-filter: blur(15px);       /* Dhundla Effect (Magic) */
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Halka sa border neechay */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: #0a193c !important; /* ✅ Footer wala Dark Blue */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Thori si shadow */
   transition: all 0.3s ease;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
 }
 
-/* Jab mouse upar jaye to thora aur dark ho jaye */
+/* Jab mouse upar jaye */
 .glass-navbar:hover {
-  background: rgba(10, 25, 60, 0.5);
+  background-color: #0a193c !important; /* Same color rahega */
+}
+
+/* Brand Name Font */
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
 }
 
 /* === VALUES / PHILOSOPHY SECTION === */
@@ -180,4 +186,333 @@ body {
   letter-spacing: 2px;
   font-weight: 700;
   font-size: 14px;
+}
+
+/* === CTA SECTION (Ready to Begin) === */
+.cta-section {
+  background-color: #f0f7ff; /* Very Light Blue Background */
+}
+
+/* 1. Dark Blue Button */
+.btn-dark-pill {
+  background-color: #0a193c !important; /* Dark Navy */
+  color: white !important;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-dark-pill:hover {
+  transform: translateY(-3px);
+  background-color: #1e3a8a !important; /* Thora light on hover */
+  box-shadow: 0 10px 20px rgba(10, 25, 60, 0.2);
+}
+
+/* 2. White Button (Simple) */
+.btn-light-pill {
+  background-color: white !important;
+  color: #0a193c !important;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb !important; /* Halka sa border */
+  transition: all 0.3s ease;
+}
+
+.btn-light-pill:hover {
+  transform: translateY(-3px);
+  background-color: #f9fafb !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* === FOOTER SECTION === */
+.footer-section {
+  background-color: #0a193c; /* Brand Dark Blue */
+  color: #e5e7eb;            /* Halka sa Grayish White */
+  font-size: 15px;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-link {
+  color: #bdc5e1; /* Light Blue-Gray */
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+  transform: translateX(5px); /* Hover pe thora aagay move kare */
+}
+
+.footer-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Halka sa border */
+  margin-top: 40px;
+  padding-top: 25px;
+}
+/* === SHOP PAGE (Clean & Light) === */
+
+.shop-page-wrapper {
+  background-color: #f0f7ff; /* Poora page Light Blue */
+  min-height: 100vh;
+  padding-top: 100px; /* Navbar ke liye jagah */
+  padding-bottom: 80px;
+}
+
+/* --- PRICING CARDS --- */
+.pricing-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Bohot halki shadow */
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Popular Card (Dark Center Wala) */
+.pricing-card.popular {
+  background-color: #0a193c; /* Dark Navy */
+  color: white;
+  transform: scale(1.05); /* Thora bara */
+  z-index: 10;
+  box-shadow: 0 25px 50px rgba(10, 25, 60, 0.15);
+  border: none;
+}/* === NAVBAR (Dark Blue like Footer) === */
+.glass-navbar {
+  background-color: #0a193c !important; /* ✅ Footer wala Dark Blue */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Thori si shadow */
+  transition: all 0.3s ease;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+/* Jab mouse upar jaye */
+.glass-navbar:hover {
+  background-color: #0a193c !important; /* Same color rahega */
+}
+
+/* Brand Name Font */
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3b82f6; /* Bright Blue */
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Feature List */
+.feature-list li {
+  margin-bottom: 15px; /* Thora gap zyada */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #64748b;
+}
+.pricing-card.popular .feature-list li {
+  color: #cbd5e1; /* Dark card pe light text */
+}
+
+/* Price Tag */
+.price-tag {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 20px 0;
+  display: flex;
+  align-items: baseline;
+}
+.price-tag span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-left: 5px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- FAQ SECTION --- */
+.faq-box {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.faq-question {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0a193c;
+  margin-bottom: 10px;
+}
+
+.faq-answer {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === CONTACT PAGE === */
+
+.contact-wrapper {
+  background-color: #f0f7ff; /* Light Blue Background */
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* 1. Contact Form Card */
+.contact-form-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  height: 100%;
+}
+
+/* Form Inputs Styling */
+.form-control-custom {
+  background-color: #f8fafc; /* Very light grey */
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 15px;
+  color: #0a193c;
+  transition: all 0.3s;
+}
+
+.form-control-custom:focus {
+  background-color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+/* 2. Info Cards (Right Side) */
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateX(5px);
+}
+
+.info-icon-box {
+  width: 45px;
+  height: 45px;
+  background-color: #eff6ff;
+  color: #3b82f6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 3. Dark Chat Box (Bottom Right) */
+.chat-help-card {
+  background-color: #0a193c; /* Dark Navy */
+  color: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 20px 40px rgba(10, 25, 60, 0.2);
+}
+
+/* === TERMS OF SERVICE PAGE === */
+
+/* 1. Header Section (Light Blue) */
+.terms-header {
+  background-color: #f0f7ff; /* Same Light Blue as Shop/Contact */
+  padding-top: 140px; /* Navbar ke neeche */
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.terms-date {
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* 2. Content Section (White) */
+.terms-content {
+  background-color: white;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+/* Typography for Legal Text */
+.legal-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #0a193c;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.legal-text {
+  font-family: 'Inter', sans-serif;
+  color: #475569; /* Slate Gray */
+  line-height: 1.8; /* Parhne mein aasani ho */
+  font-size: 16px;
+  margin-bottom: 20px;
 }

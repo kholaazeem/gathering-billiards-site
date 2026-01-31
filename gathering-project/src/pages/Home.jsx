@@ -1,7 +1,8 @@
 import React from 'react';
 import MyNavbar from '../components/MyNavbar';
 import HeroSection from '../components/HeroSection';
-import ValuesSection from '../components/ValuesSection'; // ✅ Import kiya
+import ValuesSection from '../components/ValuesSection'; 
+import CTASection from '../components/CTASection';// ✅ Import kiya
 
 const Home = () => {
   return (
@@ -13,6 +14,8 @@ const Home = () => {
       
       {/* 2. Values Section (Cards wala) */}
       <ValuesSection />
+
+      <CTASection />
     </>
   );
 };
