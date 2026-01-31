@@ -1,0 +1,183 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* === HERO BACKGROUND === */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* Gradient Overlay + Image */
+  background: linear-gradient(to bottom, rgba(10, 25, 60, 0.8), rgba(13, 50, 120, 0.6)), 
+              url('/couple-pool.jpg'); 
+  background-size: cover;
+  background-position: center;
+  color: white;
+  
+  /* Centering ke liye flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* === PREMIUM BUTTONS === */
+
+/* 1. Primary Button (White Wala) */
+.btn-white-pill {
+  background-color: #ffffff !important;
+  color: #0a193c !important; /* Dark Blue Text */
+  
+  /* ✅ Padding Barha Di (Mota Button) */
+  padding: 16px 45px; 
+  
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 2px solid #ffffff !important; /* Border zaroori hai taake hover pe shape nazar aaye */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect: Transparent + White Text */
+.btn-white-pill:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important; /* ✅ Transparent Background */
+  color: #ffffff !important; /* Text White ho jayega */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px); /* Glass Effect */
+}
+
+/* 2. Secondary Button (Transparent Wala) */
+.btn-transparent-pill {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  
+  /* ✅ Padding Barha Di */
+  padding: 16px 45px;
+  
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+  transition: all 0.3s ease;
+}
+
+.btn-transparent-pill:hover {
+  background-color: #ffffff !important; /* Hover pe ye Pura White ho jayega */
+  color: #0a193c !important; /* Text Dark */
+  border-color: #ffffff !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* === TRANSPARENT CIRCLES (Social Proof) === */
+.glass-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1); /* Halka sa transparent */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* White Border */
+  backdrop-filter: blur(4px); /* Blur effect glass jesa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-left: -15px; /* Overlap ke liye */
+  transition: transform 0.3s;
+}
+.glass-circle:first-child {
+  margin-left: 0;
+}
+.glass-circle:hover {
+  transform: translateY(-5px);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- GLASS NAVBAR --- */
+.glass-navbar {
+  background: rgba(10, 25, 60, 0.2); /* Halka sa Dark Blue background */
+  backdrop-filter: blur(15px);       /* Dhundla Effect (Magic) */
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Halka sa border neechay */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Jab mouse upar jaye to thora aur dark ho jaye */
+.glass-navbar:hover {
+  background: rgba(10, 25, 60, 0.5);
+}
+
+/* === VALUES / PHILOSOPHY SECTION === */
+
+/* 1. Card Styling */
+.value-card {
+  background: white;
+  border: 1px solid #f0f0f0; 
+  border-radius: 20px;
+  padding: 40px 30px;
+  
+  /* Default State */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+  
+  /* Smooth Animation */
+  transition: all 0.4s ease; 
+  position: relative;
+  top: 0; 
+}
+
+/* 2. Hover Effect: Card Upar Uthega (Lekin bohot thora) */
+.value-card:hover {
+  /* Pehle -15px tha, ab sirf -5px (Bohot subtle lift) */
+  transform: translateY(-5px) !important; 
+  
+  /* Shadow bhi soft hogi */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+  border-color: transparent;
+}
+
+/* 3. Icon Box (No Movement, Subtle Color) */
+.icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: #eff6ff; /* Very Light Blue (Default) */
+  color: #2563eb;            /* Royal Blue Icon */
+  border-radius: 16px;       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  
+  /* Transition sirf color ke liye */
+  transition: background-color 0.3s ease;
+}
+
+/* Jab Card pe hover ho */
+.value-card:hover .icon-box {
+  /* ❌ Movement Khatam (No Scale, No Rotate) */
+  transform: none !important;
+
+  /* ✅ Subtle Background Change (Halka sa gehra neela) */
+  background-color: #dbeafe; 
+  
+  /* Icon ka color change nahi hoga, wo wesa hi rahega */
+  color: #2563eb; 
+}
+
+.text-label {
+  color: #3b82f6; 
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 14px;
+}

@@ -1,41 +1,39 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Bootstrap CSS Import (Zaroori hai)
+// 1. Bootstrap CSS (Zaroori hai styling ke liye)
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// Components
+// 2. Components Import
+// Note: Agar aapne MyNavbar 'Home.jsx' mein lagaya tha, to wahan se hata dein
+// kyunke hum usay yahan global laga rahe hain.
 import MyNavbar from './components/MyNavbar';
-import Footer from './components/Footer';
 
-// Pages
+// 3. Pages Import
 import Home from './pages/Home';
-import Shop from './pages/Shop';
-import Contact from './pages/Contact';
-import Terms from './pages/Terms';
+
+// --- Placeholder Pages (Taake links click karne par error na aaye) ---
+const Shop = () => <div className="pt-5 mt-5 text-center"><h1>Shop Page</h1><p>Coming Soon...</p></div>;
+const Contact = () => <div className="pt-5 mt-5 text-center"><h1>Contact Page</h1><p>Form will be here.</p></div>;
+const Terms = () => <div className="pt-5 mt-5 text-center"><h1>Terms of Service</h1><p>Legal text here.</p></div>;
 
 function App() {
   return (
     <BrowserRouter>
-      {/* Layout Wrapper: Footer ko neeche rakhne ke liye */}
+      {/* Wrapper */}
       <div className="d-flex flex-column min-vh-100">
         
-        {/* 1. Navbar (Hamesha Top par rahegi) */}
+        {/* ✅ Global Navbar (Har page par dikhegi) */}
         <MyNavbar />
 
-        {/* 2. Main Content Area (Pages yahan badlenge) */}
-        <div className="flex-grow-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/terms" element={<Terms />} />
-          </Routes>
-        </div>
+        {/* Routing Logic */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
+        </Routes>
 
-        {/* 3. Footer (Hamesha Bottom par rahega) */}
-        <Footer />
-        
       </div>
     </BrowserRouter>
   );
